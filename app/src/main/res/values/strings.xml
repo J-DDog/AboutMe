@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">About Me</string>
+
+    <string name="school_string">I Don't nessisarily like school. But its better thain doing nothing all summer.
+</string>
+    <string name="game_string">I Love Games, And always have. They have shaped my life. They have shaped my intrests. They Showed me technology That I love now.
+</string>
+    <string name="code_string">I Love Programming and plan to use it in my future. It uses my favorite thing. logic. It gives. me the power to make the computer do what i want.
+</string>
+    <string name="camping_string">I Love Camping. Ive done it since i was little. It gives me the change to be closer to nature. Apart from my schooling and technology.
+</string>
+    <string name="food_string">I love Food. I eat it every day. It helps me keep going. It empowers me to live my life and to change my life.
+</string>
+    <string name="action_settings">Settings</string>
+</resources>
