@@ -65,4 +65,13 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:visibility="invisible" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back_button_text"
+        android:id="@+id/backButton"
+        android:layout_above="@+id/colorChangeButton"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
