@@ -11,6 +11,9 @@
 </string>
     <string name="food_string">I love Food. I eat it every day. It helps me keep going. It empowers me to live my life and to change my life.
 </string>
+
+    <string name="game_button_text">I like Games</string>
+    <string name="food_button_text">I love Food</string>
     <string name="back_button_text">Back</string>
     <string name="action_settings">Settings</string>
 </resources>
