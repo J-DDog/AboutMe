@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 import android.graphics.Color;
 import android.widget.TextView;
 import android.widget.ImageView;
@@ -22,7 +22,7 @@ public class AboutMe extends AppCompatActivity
     private Button campButton;
     private Button programmingButton;
 
-    private RelativeLayout myLayout;
+    private LinearLayout myLayout;
 
     private TextView myText;
     private ImageView myImage;
@@ -46,10 +46,17 @@ public class AboutMe extends AppCompatActivity
         campButton = (Button) findViewById(R.id.campingButton);
         programmingButton = (Button) findViewById(R.id.programmingButton);
 
-        myLayout = (RelativeLayout) findViewById(R.id.myLayout);
+        myLayout = (LinearLayout) findViewById(R.id.myLayout);
 
         myText = (TextView) findViewById(R.id.textView);
         myImage = (ImageView) findViewById(R.id.imageView);
+
+        schoolButton.setWidth((int)(myLayout.getWidth()*0.5));
+        gameButton.setWidth((int)(myLayout.getWidth()*0.5));
+        foodButton.setWidth((int)(myLayout.getWidth()*0.5));
+        programmingButton.setWidth((int)(myLayout.getWidth()*0.5));
+
+        setupListeners();
     }
 
     @Override

@@ -1,99 +1,11 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".AboutMe"
-    android:id="@+id/myLayout">
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="School"
-        android:id="@+id/schoolButton"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/programmingButton"
-        android:layout_toStartOf="@+id/programmingButton"
-        android:enabled="true"
-        android:visibility="visible" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Games"
-        android:id="@+id/gameButton"
-        android:layout_alignBaseline="@+id/schoolButton"
-        android:layout_alignBottom="@+id/schoolButton"
-        android:layout_alignLeft="@+id/campingButton"
-        android:layout_alignStart="@+id/campingButton"
-        android:enabled="true"
-        android:visibility="visible" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Food"
-        android:id="@+id/foodButton"
-        android:layout_marginTop="42dp"
-        android:layout_below="@+id/schoolButton"
-        android:layout_toLeftOf="@+id/programmingButton"
-        android:layout_toStartOf="@+id/programmingButton"
-        android:enabled="true"
-        android:visibility="visible" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Camping"
-        android:id="@+id/campingButton"
-        android:layout_above="@+id/programmingButton"
-        android:layout_toRightOf="@+id/programmingButton"
-        android:layout_toEndOf="@+id/programmingButton"
-        android:enabled="true"
-        android:visibility="visible" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Programming"
-        android:id="@+id/programmingButton"
-        android:layout_marginTop="40dp"
-        android:layout_below="@+id/foodButton"
-        android:layout_centerHorizontal="true"
-        android:enabled="true"
-        android:visibility="visible" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/colorChangeButton"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:visibility="visible"
-        android:enabled="true" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/back_button_text"
-        android:id="@+id/backButton"
-        android:layout_above="@+id/colorChangeButton"
-        android:layout_centerHorizontal="true"
-        android:enabled="true"
-        android:visibility="gone" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:background="@drawable/gaming_image"
-        android:layout_centerHorizontal="true"
-        android:layout_alignBottom="@+id/foodButton"
-        android:visibility="gone" />
+    android:id="@+id/myLayout"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
@@ -105,6 +17,141 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/foodButton"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:layout_row="0"
+        android:layout_column="6" />
 
-</RelativeLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:background="@drawable/gaming_image"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/foodButton"
+        android:visibility="gone"
+        android:layout_row="0"
+        android:layout_column="5" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:layout_width="254dp"
+            android:layout_height="wrap_content"
+            android:text="School"
+            android:id="@+id/schoolButton"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/programmingButton"
+            android:layout_toStartOf="@+id/programmingButton"
+            android:enabled="true"
+            android:visibility="visible"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="left" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Games"
+            android:id="@+id/gameButton"
+            android:layout_alignBaseline="@+id/schoolButton"
+            android:layout_alignBottom="@+id/schoolButton"
+            android:layout_alignLeft="@+id/campingButton"
+            android:layout_alignStart="@+id/campingButton"
+            android:enabled="true"
+            android:visibility="visible"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:layout_width="282dp"
+            android:layout_height="wrap_content"
+            android:text="Food"
+            android:id="@+id/foodButton"
+            android:layout_marginTop="42dp"
+            android:layout_below="@+id/schoolButton"
+            android:layout_toLeftOf="@+id/programmingButton"
+            android:layout_toStartOf="@+id/programmingButton"
+            android:enabled="true"
+            android:visibility="visible"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_gravity="bottom" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Programming"
+            android:id="@+id/programmingButton"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/foodButton"
+            android:layout_centerHorizontal="true"
+            android:enabled="true"
+            android:visibility="visible"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_gravity="bottom" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Camping"
+        android:id="@+id/campingButton"
+        android:layout_above="@+id/programmingButton"
+        android:layout_toRightOf="@+id/programmingButton"
+        android:layout_toEndOf="@+id/programmingButton"
+        android:enabled="true"
+        android:visibility="visible"
+        android:layout_row="2"
+        android:layout_column="2"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|bottom">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back_button_text"
+            android:id="@+id/backButton"
+            android:layout_above="@+id/colorChangeButton"
+            android:layout_centerHorizontal="true"
+            android:enabled="true"
+            android:visibility="gone"
+            android:layout_row="0"
+            android:layout_column="4"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/colorChangeButton"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible"
+            android:enabled="true"
+            android:layout_row="18"
+            android:layout_column="1" />
+
+    </LinearLayout>
+
+</LinearLayout>
