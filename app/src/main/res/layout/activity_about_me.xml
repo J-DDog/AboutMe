@@ -13,7 +13,9 @@
         android:id="@+id/schoolButton"
         android:layout_alignParentTop="true"
         android:layout_toLeftOf="@+id/programmingButton"
-        android:layout_toStartOf="@+id/programmingButton" />
+        android:layout_toStartOf="@+id/programmingButton"
+        android:enabled="true"
+        android:visibility="visible" />
 
     <Button
         android:layout_width="wrap_content"
@@ -23,7 +25,9 @@
         android:layout_alignBaseline="@+id/schoolButton"
         android:layout_alignBottom="@+id/schoolButton"
         android:layout_alignLeft="@+id/campingButton"
-        android:layout_alignStart="@+id/campingButton" />
+        android:layout_alignStart="@+id/campingButton"
+        android:enabled="true"
+        android:visibility="visible" />
 
     <Button
         android:layout_width="wrap_content"
@@ -33,7 +37,9 @@
         android:layout_marginTop="42dp"
         android:layout_below="@+id/schoolButton"
         android:layout_toLeftOf="@+id/programmingButton"
-        android:layout_toStartOf="@+id/programmingButton" />
+        android:layout_toStartOf="@+id/programmingButton"
+        android:enabled="true"
+        android:visibility="visible" />
 
     <Button
         android:layout_width="wrap_content"
@@ -42,7 +48,9 @@
         android:id="@+id/campingButton"
         android:layout_above="@+id/programmingButton"
         android:layout_toRightOf="@+id/programmingButton"
-        android:layout_toEndOf="@+id/programmingButton" />
+        android:layout_toEndOf="@+id/programmingButton"
+        android:enabled="true"
+        android:visibility="visible" />
 
     <Button
         android:layout_width="wrap_content"
@@ -51,7 +59,9 @@
         android:id="@+id/programmingButton"
         android:layout_marginTop="40dp"
         android:layout_below="@+id/foodButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:enabled="true"
+        android:visibility="visible" />
 
     <Button
         android:layout_width="wrap_content"
@@ -62,7 +72,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:visibility="invisible" />
+        android:visibility="visible"
+        android:enabled="true" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -71,7 +82,9 @@
         android:text="@string/back_button_text"
         android:id="@+id/backButton"
         android:layout_above="@+id/colorChangeButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:enabled="true"
+        android:visibility="gone" />
 
     <ImageView
         android:layout_width="wrap_content"

@@ -99,7 +99,8 @@ public class AboutMe extends AppCompatActivity
         {
             public void onClick(View v)
             {
-                updateVisibility("Main");
+                updateButtonVisibility(true);
+                backButton.setVisibility(View.GONE);
 
             }
         });
@@ -107,7 +108,9 @@ public class AboutMe extends AppCompatActivity
         {
             public void onClick(View v)
             {
-                updateVisibility("School");
+                myImage.setBackgroundResource(R.drawable.back_to_school);
+                myText.setText(R.string.school_string);
+                updateButtonVisibility(false);
 
             }
 
@@ -116,7 +119,9 @@ public class AboutMe extends AppCompatActivity
         {
             public void onClick(View v)
             {
-                updateVisibility("Game");
+                myImage.setBackgroundResource(R.drawable.gaming_image);
+                myText.setText(R.string.game_string);
+                updateButtonVisibility(false);
 
             }
 
@@ -125,7 +130,9 @@ public class AboutMe extends AppCompatActivity
         {
             public void onClick(View v)
             {
-                updateVisibility("Food");
+                myImage.setBackgroundResource(R.drawable.food_image);
+                myText.setText(R.string.food_string);
+                updateButtonVisibility(false);
 
             }
 
@@ -134,67 +141,22 @@ public class AboutMe extends AppCompatActivity
         {
             public void onClick(View v)
             {
-                updateVisibility("Camping");
+                myImage.setBackgroundResource(R.drawable.camping_image);
+                myText.setText(R.string.camping_string);
+                updateButtonVisibility(false);
 
             }
 
         });
         programmingButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                updateVisibility("Programming");
+                myImage.setBackgroundResource(R.drawable.coding);
+                myText.setText(R.string.code_string);
+                updateButtonVisibility(false);
 
             }
 
         });
-
-    }
-
-    /**
-     * Called to change the visibility of all to make the current screen
-     * @param currentScreen is the current screen you want: "Main", "School", "Game", "Food", "Camping", "Programming"
-     */
-    public void updateVisibility(String currentScreen)
-    {
-
-
-        if(currentScreen.equals("Main"))
-        {
-            updateButtonVisibility(true);
-            backButton.setVisibility(View.GONE);
-        }
-        else if(currentScreen.equals("School"))
-        {
-            updateButtonVisibility(false);
-            myImage.setBackgroundResource(R.drawable.back_to_school);
-            myText.setText(R.string.school_string);
-        }
-        else if(currentScreen.equals("Game"))
-        {
-            updateButtonVisibility(false);
-            myImage.setBackgroundResource(R.drawable.gaming_image);
-            myText.setText(R.string.game_string);
-
-        }
-        else if(currentScreen.equals("Food"))
-        {
-            updateButtonVisibility(false);
-            myImage.setBackgroundResource(R.drawable.food_image);
-            myText.setText(R.string.food_string);
-
-        }
-        else if(currentScreen.equals("Camping"))
-        {
-            updateButtonVisibility(false);
-            myImage.setBackgroundResource(R.drawable.camping_image);
-            myText.setText(R.string.camping_string);
-
-        }
-        else if(currentScreen.equals("Programming"))
-        {
-            updateButtonVisibility(false);
-            myImage.setBackgroundResource(R.drawable.coding);
-            myText.setText(R.string.code_string);
-        }
 
     }
 
@@ -208,21 +170,22 @@ public class AboutMe extends AppCompatActivity
         {
             myImage.setVisibility(View.GONE);
             myText.setVisibility(View.GONE);
+            programmingButton.setVisibility(View.GONE);
             schoolButton.setVisibility(View.VISIBLE);
             gameButton.setVisibility(View.VISIBLE);
             foodButton.setVisibility(View.VISIBLE);
             campButton.setVisibility(View.VISIBLE);
-            programmingButton.setVisibility(View.VISIBLE);
+
         }
         else
         {
-            myImage.setVisibility(View.VISIBLE);
-            myText.setVisibility(View.VISIBLE);
             schoolButton.setVisibility(View.GONE);
             gameButton.setVisibility(View.GONE);
             foodButton.setVisibility(View.GONE);
             campButton.setVisibility(View.GONE);
             programmingButton.setVisibility(View.GONE);
+            myImage.setVisibility(View.VISIBLE);
+            myText.setVisibility(View.VISIBLE);
             backButton.setVisibility(View.VISIBLE);
         }
 
