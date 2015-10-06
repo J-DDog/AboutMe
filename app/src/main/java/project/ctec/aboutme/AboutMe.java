@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.graphics.Color;
 import android.widget.TextView;
 import android.widget.ImageView;
@@ -22,7 +22,7 @@ public class AboutMe extends AppCompatActivity
     private Button campButton;
     private Button programmingButton;
 
-    private LinearLayout myLayout;
+    private RelativeLayout myLayout;
 
     private TextView myText;
     private ImageView myImage;
@@ -30,6 +30,7 @@ public class AboutMe extends AppCompatActivity
     private int redColor;
     private int blueColor;
     private int greenColor;
+    private int randColor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -37,7 +38,7 @@ public class AboutMe extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_me);
 
-        // Attaching my Buttons
+        // Initializing my Buttons
         colorChangeButtton = (Button) findViewById(R.id.colorChangeButton);
         backButton = (Button) findViewById(R.id.backButton);
         schoolButton = (Button) findViewById(R.id.schoolButton);
@@ -46,7 +47,7 @@ public class AboutMe extends AppCompatActivity
         campButton = (Button) findViewById(R.id.campingButton);
         programmingButton = (Button) findViewById(R.id.programmingButton);
 
-        myLayout = (LinearLayout) findViewById(R.id.myLayout);
+        myLayout = (RelativeLayout) findViewById(R.id.myLayout);
 
         myText = (TextView) findViewById(R.id.textView);
         myImage = (ImageView) findViewById(R.id.imageView);
@@ -98,7 +99,11 @@ public class AboutMe extends AppCompatActivity
                 blueColor = (int) (Math.random() * 256);
                 greenColor = (int) (Math.random() * 256);
 
-                myLayout.setBackgroundColor(Color.rgb(redColor, blueColor, greenColor));
+                randColor = Color.rgb(redColor, blueColor, greenColor);
+
+                myLayout.setBackgroundColor(randColor);
+                myText.setBackgroundColor(randColor);
+
             }
 
         });
@@ -177,7 +182,8 @@ public class AboutMe extends AppCompatActivity
         {
             myImage.setVisibility(View.GONE);
             myText.setVisibility(View.GONE);
-            programmingButton.setVisibility(View.GONE);
+            backButton.setVisibility(View.GONE);
+            programmingButton.setVisibility(View.VISIBLE);
             schoolButton.setVisibility(View.VISIBLE);
             gameButton.setVisibility(View.VISIBLE);
             foodButton.setVisibility(View.VISIBLE);
