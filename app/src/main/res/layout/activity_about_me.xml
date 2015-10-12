@@ -138,7 +138,8 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/gridLayout">
+        android:id="@+id/gridLayout"
+        android:visibility="gone">
 
         <Button
             style="?android:attr/buttonStyleSmall"
